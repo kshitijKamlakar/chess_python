@@ -9,6 +9,7 @@ from condition import Condition
 from number import Number
 class Chess_Board:
     def __init__(self):
+
         self.board = [[Empty(x='',y='',sl='.',team='')]*9 for _ in range(9)]
         self.board[0][0] = Rook(x=0,y=0,sl='r',team='black')
         self.board[0][1] = Knight(x=0,y=1,sl='n',team='black')
@@ -42,6 +43,7 @@ class Chess_Board:
         self.board[6][5] = Pawn(x=6,y=5,sl='P',team='white')
         self.board[6][6] = Pawn(x=6,y=6,sl='P',team='white')
         self.board[6][7] = Pawn(x=6,y=7,sl='P',team='white')
+
         for i in range(9):
             self.board[i][8 ]= Number(sl=i)
         for j in range(9):

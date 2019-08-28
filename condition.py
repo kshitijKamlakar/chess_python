@@ -1,7 +1,10 @@
 class Condition:
 
     def range(x,y):
-        return x > 8 and y > 8
+        if x < 0 and y < 0 :
+            return False
+        if x > 7 and y > 7 :
+            return False
 
     def if_figure(board,x,y):
         return board[x][y].sl == '.'
@@ -16,8 +19,8 @@ class Condition:
         while True:
             try:
                 print('give x and y')
-                x = int(input())
-                y = int(input())
+                x = int(input("x:"))
+                y = int(input("y:"))
             except:
                 print('Coordinates can only be integers')
             if Condition.range(x,y):

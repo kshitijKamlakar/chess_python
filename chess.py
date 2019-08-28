@@ -7,7 +7,6 @@ from chess_board import Chess_Board
 try :
     a=Chess_Board()
     a.display()
-
     while True:
         try:
             a.move()
